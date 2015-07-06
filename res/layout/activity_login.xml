@@ -7,10 +7,11 @@
         android:id="@+id/etUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="11"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:layout_gravity="center" >
+        android:layout_gravity="center"
+        android:hint="@string/enterUsername" >
 
         <requestFocus />
     </EditText>
@@ -19,20 +20,30 @@
         android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="11"
         android:inputType="textPassword"
         android:layout_marginBottom="50dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:hint="@string/enterPassword" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
+        android:text="@string/signIn"
         android:layout_marginBottom="50dp"
         android:layout_gravity="center"
-        android:onClick="loginButton"
-        android:src="@drawable/login"
-        android:contentDescription="@string/login" />
+        android:onClick="loginButtonClick"
+        android:contentDescription="@string/signIn" />
+    
+     <Button
+        android:id="@+id/btSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/createAccount"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:onClick="createAccountClick"
+        android:contentDescription="@string/createAccount" />
 
 </LinearLayout>

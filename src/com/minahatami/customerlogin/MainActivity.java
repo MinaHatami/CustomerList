@@ -1,11 +1,14 @@
-package mina.hatami.customerlogin;
+package com.minahatami.customerlogin;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends Activity {
+
+	private String TAG = "MainActivity";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -14,24 +17,28 @@ public class MainActivity extends Activity {
 	}
 
 	public void buttonClick(View view) {
-		Intent intent;
+
+		Log.v(TAG, "Id: " + view.getId());
 
 		// get the id of the view clicked. (in this case button)
 		switch (view.getId()) {
 		case R.id.btAddCustomer:
-			intent = new Intent(this, AddCustomerActivity.class);
+			Intent intent = new Intent(this, AddCustomerActivity.class);
 			startActivity(intent);
+			break;
 
 		case R.id.btCustomerList:
-			intent = new Intent(this, CustomerListActivity.class);
-			startActivity(intent);
+			Intent intent1 = new Intent(this, CustomerListActivity.class);
+			startActivity(intent1);
+			break;
 
 		case R.id.btChangePass:
-			intent = new Intent(this, ChangePasswordActivity.class);
-			startActivity(intent);
+			Intent intent2 = new Intent(this, ChangePasswordActivity.class);
+			startActivity(intent2);
+			break;
 			
-			default:
-				return;
+		default:
+			return;
 		}
 	}
 }
